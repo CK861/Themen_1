@@ -44,7 +44,15 @@
 // console.log("Inhalt: " + test);
 // console.log("-------------");
 
-/* Variablen vs. Konstantn in JS */
+/* Variablen vs. Konstanten in JS */
 
+let test;  // Deklaration
+test = "hi";  // Wertzuweisung (Initialisierung)
+test = "hello";
+console.log("Inhalt: " + test); // Ausgabe
+
+const test2 = "Hi!";
+test2 = "Hello!";
+console.log("Inhalt: " + test2); // Ausgabe
 
 

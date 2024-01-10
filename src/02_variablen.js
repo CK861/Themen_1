@@ -46,13 +46,18 @@
 
 /* Variablen vs. Konstanten in JS */
 
-let test;  // Deklaration
-test = "hi";  // Wertzuweisung (Initialisierung)
-test = "hello";
-console.log("Inhalt: " + test); // Ausgabe
 
-const test2 = "Hi!";
-test2 = "Hello!";
-console.log("Inhalt: " + test2); // Ausgabe
+// Variablen
+// let test;  // Deklaration
+// test = "hi";  // Wertzuweisung (Initialisierung)
+// test = "hello"; // überschreiben
+// console.log("Inhalt: " + test); // Ausgabe
+
+// Konstante
+// const test2 = "Hi!"; //Deklaration und Wertzuweisung gemeinsam
+// test2 = "Hello!"; // Laufzeitfehler
+// console.log("Inhalt: " + test2); // Ausgabe
+
+
 
 

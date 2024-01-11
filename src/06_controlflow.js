@@ -1,7 +1,7 @@
 // Entscheidungsstrukturen | control flow
 
 // Deklaration + Assignment
-const ageJohn = 32;
+const ageJohn = 30;
 const ageMark = 30;
 
 // Deklaration
@@ -12,58 +12,91 @@ isJohnOlder = (ageJohn > ageMark);
 isJohnEqual = (ageJohn == ageMark);
 
 // Ausgabe
-console.log("ageJohn: " + ageJohn);
-console.log("ageMark: " + ageMark);
-console.log("isJohnOlder: " + isJohnOlder);
-console.log("isJohnEqual: " + isJohnEqual);
-console.log("------------------");
+// console.log("ageJohn: " + ageJohn);
+// console.log("ageMark: " + ageMark);
+// console.log("isJohnOlder: " + isJohnOlder);
+// console.log("isJohnEqual: " + isJohnEqual);
+// console.log("------------------");
 
-/************ IF  ************/
+/************ IF  ************/
 // TINA --> There is no alternative!
 // entweder JA oder nix ... alternativlos
 // Türsteher-Politik (Doors 10 p.m.)
 
-// if (true)
-// if (false)
+// if(true)
+// if(false)
 // if(isJohnOlder)
 // if(ageJohn > ageMark)
 // {
-// console.log("John is älter!");
+//     console.log("John ist älter!");
 // }
 
 /************ IF - ELSE  ************/
-// mit Alternative  
+// mit Alternative  
 // entweder ja oder nein
 
-//if (true)
-//if (isJohnOlder) 
+// if (true)
+// if (false)
+// if (isJohnOlder)
 // if(ageJohn > ageMark)
 // {
-//     console.log("John ist älter!");    
+//     console.log("John ist älter!");
 // } 
 // else 
 // {
-//     console.log("John ist jünger!");   
+//     console.log("John ist jünger!");
 // }
 
-/************  Ternäre (ternary) Schreibweise ************/
+/************  Ternäre (ternary) Schreibweise ************/
 // console.log( (isJohnOlder) ? "John is older" : "Mark is older");
 
-/************ IF - ELSE IF  ************/
+/************ IF - ELSE IF  ************/
 // mit alternativen Fällen (älter, jünger, gleich alt)
 
-// JA Zweig
-if(isJohnOlder)
+// if(isJohnOlder)
+// // Ja- Zweig
+// {
+//     console.log("John ist älter!");
+// } 
+// // alternative Zweige ... 1 .n
+// else if(isJohnEqual)
+// {
+//     console.log("John ist gleich alt!");
+// }
+// // gemeneinsame Alternative
+// else 
+// {
+//     console.log("John ist jünger!");
+// }
+
+/****** Fallunterscheidung / SWITCH|CASE 1 ******/
+
+const firstName = "Jane";
+let job;
+
+job = "driver";  // .. fährt TAXI! / UBER
+job = "diver"; // .. taucht im Rhein! 
+job = "artist"; // .. malt ein Bild!
+job = "pilot"; // .. macht etwas anderes! --> default
+job = "teacher"; // .. unterrichtet!
+job = "instructor"; // .. unterrichtet!
+
+switch (job) 
 {
-    console.log("John ist älter!");    
-} 
-// alternative Zweige... 1 .n
-else if(isJohnEqual) 
-{
-    console.log("John ist gleich alt!");   
-}
-// gemeinsame Alternative
-else 
-{
-    console.log("John ist jünger!");   
+    case "driver":
+        console.log(firstName + " fährt TAXI!");
+        break;
+    case "diver":
+        console.log(firstName + " taucht im Rhein!");
+        break;
+    case "artist":
+        console.log(firstName + " malt ein Bild!");
+        break;
+    case "teacher":
+    case "instructor":
+        console.log(firstName + " unterrichtet!");
+        break;
+    default:
+        console.log("Jane macht etwas anderes!");
+        break;
 }

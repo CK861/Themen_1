@@ -10,6 +10,8 @@
 4. Ausgabe in Konsole : check!
 */
 
+const ERROR_STR_DIV = "DIV durch 0 ist nicht möglich!"
+
 // module: divison a / b
 
 // output(div(4,2));
@@ -17,18 +19,23 @@
 // output(div(3,2));
 // output(div(3,-2));
 // output(div(0,2));
-// output(div(0,0));
+ output(div(0,0));
 
 function div(a,b)
 {
+	if (b == 0) 
+	{
+		return ERROR_STR_DIV;	// Ausnahme
+	}
+
 	if (b !== 0) // b ungleich 0
 	{
-		return a / b;
+		return a / b;   // Reguläres Verhalten
 	}
-	else 
-	{
-		return "Div durch Null ist nicht definiert";
-	}	
+	// else 
+	// {
+	// 	return ERROR_STR_DIV;     // Ausnahme
+	// }	
 }
 
 
